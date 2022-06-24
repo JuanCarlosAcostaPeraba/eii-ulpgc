@@ -1,0 +1,15 @@
+Código de una solución incorrecta al problema del búfer finito.
+El búfer es una estructura implementada como un búfer circular en un array de C. Es una variable privada dentro del módulo buffer_circular.c
+Los items se insertan en el búfer mediante hilos (hilos productores).
+Los items del búfer se extraen mediante hilos (hilos consumidores).
+
+buffer_circular.h: contiene la interfaz pública del búfer compartido.
+buffer_circular.c: contiene la definición de la estructura interna y la implementación de las funciones de manejo del búfer.
+test_hilos.c: contiene la función main y un ejemplo de (mal) uso del búfer por parte de varios hilos productores y consumidores.
+
+La compilación se realiza mediante la orden:
+$ c99 -o "archivo_ejecutable" test_hilos.c buffer_circular.c -lpthread
+"archivo_ejecutable": ruta del archivo binario ejecutable
+
+La forma correcta de invocar al programa es la siguiente:
+# "archivo_ejecutable" tamaño_búfer num_productores num_consumidores
