@@ -41,3 +41,4 @@
 20. [TSP trayecto parcial mínimo](./minizinc/tspminedge.mzn)
 21. [Emparejamiento perfecto de coste mínimo](./minizinc/perfectmatching.mzn)
 22. [Sudoku](./minizinc/sudoku.mzn)
+23. [Incógnitas](./minizinc/incognitas.mzn)
