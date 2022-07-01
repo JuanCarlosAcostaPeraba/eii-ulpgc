@@ -22,8 +22,6 @@ _, 3, _, 2, _, 7, 6, 9, _|
 _, _, _, _, _, _, _, _, _|
 |]; % Sudoku inicial
 
-include "alldifferent.mzn"; % Importa el predicado alldifferent
-
 array[R] of R: first_i = [((k-1) div 3) * 3 + 1| k in R]; % Primer numero de la fila
 array[R] of R: first_j = [((k-1) mod 3) * 3 + 1| k in R]; % Primer numero de la columna
 
