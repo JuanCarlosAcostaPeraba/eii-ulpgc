@@ -23,7 +23,6 @@ prog = [3, 2, 4, 2]; % Programadores necesarios para cada aplicacion
 
 % Escriba su codigo a partir de aqui
 array [1..n] of var 0..max_tiempo: comienzo; % Comienzo de cada aplicacion
-
 var 0..max_tiempo: total; % Tiempo total de ejecucion
 
 constraint cumulative(comienzo, tiempo, prog, k); % Restricciones de planificacion
