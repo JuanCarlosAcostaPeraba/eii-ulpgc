@@ -12,6 +12,7 @@ array[VERTEX, VERTEX] of int: weights; % |
 array[VERTEX] of var VERTEX: edge;     % |
 % ---------------------------------------|
 
+% Entradas
 n = 6; % Numero de vertices
 weights = [|
 10000,   5,     3,     10000,  2,     10000|
@@ -22,6 +23,7 @@ weights = [|
 10000,   2,     10000, 2,      5,     10000|
 |]; % Pesos de las aristas
 
+% Escriba su codigo a partir de aqui
 var int: result; % Resultado del emparejamiento
 
 constraint alldifferent(edge); % Todos los vertices deben ser emparejados

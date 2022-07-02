@@ -13,6 +13,7 @@ int: maxAllowedEdge;               % |
 array[City,City] of int: distance; % |
 % -----------------------------------|
 
+% Entradas
 numCities = 15; % Numero de ciudades
 maxAllowedEdge = 600; % Distancia maxima permitida
 distance = [|0,-1,250,-1,-1,473,-1,172,-1,372,360,414,-1,-1,243
@@ -31,6 +32,7 @@ distance = [|0,-1,250,-1,-1,473,-1,172,-1,372,360,414,-1,-1,243
 |-1,262,-1,449,181,422,233,-1,-1,-1,-1,478,295,0,-1
 |243,457,219,-1,446,416,375,407,-1,216,118,171,-1,-1,0|]; % Matriz de distancias
 
+% Escriba su codigo a partir de aqui
 array [1..numCities] of var 1..maxAllowedEdge :succ; % Array de nodos visitados
 var 1..maxAllowedEdge: maxEdge; % Peso del camino mas largo
 

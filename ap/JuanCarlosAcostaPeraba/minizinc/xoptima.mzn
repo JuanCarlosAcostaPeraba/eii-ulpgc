@@ -5,6 +5,7 @@
 % Salida:    x = valor de x
 %            obj = valor de obj
 
+% Escriba su codigo a partir de aqui
 var 0..10: x; % Variable de decision x que va entre 0 y 10
 var int: obj = pow(x - 7, 2); % Variable para la salida
 

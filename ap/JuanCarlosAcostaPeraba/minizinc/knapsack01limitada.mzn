@@ -15,6 +15,7 @@ int: m;                       % |
 set of ITEMS: limitation;     % |
 % ------------------------------|
 
+% Entradas
 n = 3; % Numero de elementos
 capacity = 10; % Capacidad de la mochila
 value = [45,48,35]; % Valor de cada elemento
@@ -22,6 +23,7 @@ weight = [5,5,3]; % Peso de cada elemento
 m = 1; % Numero de elementos a seleccionar del conjunto de limitacion
 limitation = {1,2}; % Elementos que se pueden seleccionar
 
+% Escriba su codigo a partir de aqui
 var set of ITEMS: taken; % Elementos seleccionados
 
 constraint card(taken intersect limitation) <= m; % Limite de elementos seleccionados

@@ -10,6 +10,7 @@ set of int: R = 1..9;         % |
 array[R,R] of var R: s;       % |
 % ------------------------------|
 
+% Entradas
 s=[|
 _, _, _, _, _, _, _, _, _|
 _, 6, 8, 4, _, 1, _, 7, _|
@@ -22,6 +23,7 @@ _, 3, _, 2, _, 7, 6, 9, _|
 _, _, _, _, _, _, _, _, _|
 |]; % Sudoku inicial
 
+% Escriba su codigo a partir de aqui
 array[R] of R: first_i = [((k-1) div 3) * 3 + 1| k in R]; % Primer numero de la fila
 array[R] of R: first_j = [((k-1) mod 3) * 3 + 1| k in R]; % Primer numero de la columna
 

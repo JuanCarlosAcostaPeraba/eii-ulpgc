@@ -24,6 +24,7 @@ array[FEATURE] of var int: dessert;                      % |
 var int: budget;                                         % |
 % ---------------------------------------------------------|
 
+% Entradas
 min_energy = 3300;
 min_protein = 500;
 max_salt = 180;
@@ -62,6 +63,7 @@ dd = [| icecream, 1200, 50, 10, 120, 400 % icecream
 limitation = {icecream, chocolatecake, spaghetti, mashedpotato, banana};
 max_in_limitation = 2;
 
+% Escriba su codigo a partir de aqui
 constraint main[name] in mains;
 constraint side[name] in sides;
 constraint dessert[name] in desserts;

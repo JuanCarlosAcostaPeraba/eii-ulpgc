@@ -13,11 +13,13 @@ array[ITEMS] of int: value;   % |
 array[ITEMS] of int: weight;  % |
 % ------------------------------|
 
+% Entradas
 n = 3; % Numero de elementos
 capacity = 10; % Capacidad de la mochila
 value = [45,48,35]; % Valor de cada elemento
 weight = [5,8,3]; % Peso de cada elemento
 
+% Escriba su codigo a partir de aqui
 array[1..n] of var 0..2: taken; % Vector de elementos seleccionados
 
 constraint sum(i in 1..n)(taken[i] * weight[i]) <= capacity; % Restriccion de peso

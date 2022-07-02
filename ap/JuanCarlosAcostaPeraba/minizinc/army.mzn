@@ -12,8 +12,10 @@
 %            Z = valor
 %            J = valor
 
+% Entradas
 int: presupuesto_maximo = 1000; % presupuesto maximo
 
+% Escriba su codigo a partir de aqui
 var 0..1000: F; % numero de soldados de F
 var 0..400: L; % numero de soldados de L
 var 0..500: Z; % numero de soldados de Z

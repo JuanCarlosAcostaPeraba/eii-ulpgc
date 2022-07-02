@@ -15,11 +15,13 @@ array[Women, Men] of int: wrank; % |
 array[Men, Women] of int: mrank; % |
 % ---------------------------------|
 
+% Entradas
 Women = {Ana, Marta, Patricia};
 Men = {Carlos, Marco, Juan};
 wrank = [|1, 2, 3, |3, 2, 1, |3, 1, 2 |];
 mrank = [|2, 1, 3, |1, 2, 3, |1, 3, 2 |];
 
+% Escriba su codigo a partir de aqui
 array[Men] of var Women: wife;
 array[Women] of var Men: husband;
 var int: obj_men; 

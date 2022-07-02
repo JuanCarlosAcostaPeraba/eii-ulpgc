@@ -8,6 +8,7 @@
 int: n = 5;                   % |
 % ------------------------------|
 
+% Escriba su codigo a partir de aqui
 array[1..n] of var 0..3: x; % Declaracion de array
 
 constraint x[1] = 0; % Poner el primer valor en 0

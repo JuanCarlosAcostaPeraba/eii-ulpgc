@@ -16,6 +16,7 @@ array[1..num_edges] of var int: flow;    % |
 output ["max flow =" ++ show(max_flow)]; % |
 % -----------------------------------------|
 
+% Entradas
 num_nodes = 9; % Numero de nodos
 source= 1; % Nodo fuente
 sink = 9; % Nodo sumidero
@@ -37,6 +38,7 @@ edges = array2d(1..num_edges, 1..2, [
     8, 9]); % Matriz de aristas
 capacity = [14,23,10, 9,12,18,26,11,25, 4, 7, 8,15,20]; % Capacidad de cada arista
 
+% Escriba su codigo a partir de aqui
 constraint forall (i in 1..num_edges)(flow[i] <= capacity[i]); % El flujo tiene que ser menor a la capacidad de la tuberia
 constraint forall (i in 1..num_edges)(flow[i] >= 0); % El flujo tiene que ser positivo
 constraint forall (i in 1..num_nodes where i != source /\ i != sink)(sum(j in 1..num_edges where edges[j, 1] == i)(flow[j]) == sum(k in 1..num_edges where edges[k, 2] == i)(flow[k])); % El flujo de entrada y salida de cada nodo tiene que ser igual

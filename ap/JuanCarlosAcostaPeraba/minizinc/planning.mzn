@@ -14,12 +14,14 @@ array [1..n] of int: prog;                                                  % |
 output["Total: "++show(total)++"\n"]++[show(comienzo[i])++" " | i in 1..n]; % |
 % ----------------------------------------------------------------------------|
 
+% Entradas
 n = 4; % Numero de aplicaciones
 k = 5; % Numero de programadores
 max_tiempo = 100; % Maximo tiempo de ejecucion
 tiempo = [2, 4, 6, 3]; % Tiempo de ejecucion de cada aplicacion
 prog = [3, 2, 4, 2]; % Programadores necesarios para cada aplicacion
 
+% Escriba su codigo a partir de aqui
 array [1..n] of var 0..max_tiempo: comienzo; % Comienzo de cada aplicacion
 
 var 0..max_tiempo: total; % Tiempo total de ejecucion
