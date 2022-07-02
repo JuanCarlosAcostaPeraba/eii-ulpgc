@@ -43,4 +43,5 @@
 22. [Sudoku](./minizinc/sudoku.mzn)
 23. [Incógnitas](./minizinc/incognitas.mzn)
 24. [Caramelos](./minizinc/caramelos.mzn)
-25. [Transportistas](./minizinc/transportistas.mzn)
+25. [Palillos](./minizinc/incognitas.mzn)
+26. [Transportistas](./minizinc/transportistas.mzn)
