@@ -5,35 +5,35 @@
 % Salida:    Tiempo total: tiempo
 %            array con los tiempos de inicio por camionero
 
-% Codigo dado por el profesor ---------|
-int: n;                              % |
-int: k;                              % |
-int: t;                              % |
-int: maxTiempo;                      % |
-array [1..n] of int: tiempo;         % |
-array [1..n] of int: camiones;       % |
-array [1..n] of int: transportistas; % |
-% -------------------------------------|
+% Codigo dado por el profesor -------------------------------------------------------|
+include "globals.mzn";                                                             % |
+int: n;                                                                            % |
+int: k;                                                                            % |
+int: t;                                                                            % |
+int: max_tiempo;                                                                   % |
+array [1..n] of int: tiempo;                                                       % |
+array [1..n] of int: transportistas;                                               % |
+array [1..n] of int: camiones;                                                     % |
+output["Tiempo total: "++show(total)++"\n"]++[show(comienzo[i])++" " | i in 1..n]; % |
+% -----------------------------------------------------------------------------------|
 
 % Entradas
-n = 6; % Numero de envios
-k = 5; % Numero de transportistas
-t = 3; % Numero de camiones
-maxTiempo = 100; % Tiempo maximo del que se dispone
+n = 6; % Numero de transportes
+k = 5; % Numero total de tranportista
+t = 3; % Numero total de camiones
+max_tiempo = 100; % Tiempo maximo del que se dispone
 tiempo = [2, 4, 6, 3, 1, 2]; % Tiempo de ejecucion de cada transporte
-camiones = [3, 2, 1, 2, 2, 3]; % Camiones necesarios para cada transporte
 transportistas = [2, 3, 2, 4, 1, 1]; % Transportistas necesarios para cada transporte
+camiones = [3, 2, 1, 2, 2, 3]; % Camiones necesarios para cada transporte
 
 % Escriba su codigo a partir de aqui
-include "cumulative.mzn";
-var 0..maxTiempo: tiempoTotal; % Tiempo total para los envios
-array[1..n] of var 0..maxTiempo: tiempoCamioneros; % Tiempo que tarda cada camionero en hacer un envio
+include "cumulative.mzn"; % Importa el modelo de cumulative
 
-constraint cumulative(tiempoCamioneros, tiempo, camiones, t);
-constraint cumulative(tiempoCamioneros, tiempo, transportistas, k);
-constraint forall (i in 1..n)(tiempoCamioneros[i] + tiempo[i] <= tiempoTotal);
-%constraint tiempoTotal = sum(tiempoCamioneros);
+var 0..max_tiempo: total; % Tiempo total empleado
+array[1..n] of var 0..max_tiempo: comienzo; % Tiempo de comienzo de cada transporte
 
-solve minimize tiempoTotal;
+constraint cumulative(comienzo, tiempo, transportistas, k); % Restriccion de cumulative
+constraint cumulative(comienzo, tiempo, camiones, t); % Restriccion de cumulative
+constraint forall (i in 1..n)(comienzo[i] + tiempo[i] <= total); % Restriccion de forall
 
-output ["Tiempo total: \(tiempoTotal)\n\(tiempoCamioneros)"];
+solve minimize total; % Restriccion de minimizacion
