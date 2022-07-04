@@ -4,7 +4,9 @@ Prácticas de la asignatura de Fundamentos de los Sistemas Operativos, enfocadas
 
 **Desarrollado en C**
 
-## Colaboradores
+## Prácticas
 
-- [Juan Carlos Acosta Perabá](./JuanCarlosAcostaPeraba/)
-- [Alejandro Vialard Santana](./AlejandroVialardSantana/)
+1. [Práctica 2](./practica2/)
+2. [Práctica 3](./practica3/)
+3. [Práctica 4](./practica4/)
+4. [Práctica 5](./practica5/)

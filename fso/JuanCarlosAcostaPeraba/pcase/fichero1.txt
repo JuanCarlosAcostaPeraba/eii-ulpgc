@@ -1,1 +1,0 @@
-saludos, esto es un fichero. para probar el programa modificador. de caracteres!

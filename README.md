@@ -18,7 +18,6 @@ Repositorio con los ejercicios de las diferentes asignaturas de la carrera.
 3. Sube tus ejercicios en tu repositorio forkeado.
 4. Crea un pull request para juntar los cambios.
 
-**Nota:** El formato de para subir los ejercicios es el mismo para todos: 
-`Carpeta con nombre del usuario > Ejercicios`
+**Nota:** El formato de para subir los ejercicios es el mismo para todos: `Carpeta con nombre de la asignatura > Ejercicios`
 
-> **IMPORTANTE:** Nombrarse en el README correspondiente respetando el formato establecido
+> **IMPORTANTE:** Crear un README con los ejercicios ordenados para facilitar encontrarlos.

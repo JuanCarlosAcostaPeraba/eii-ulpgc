@@ -4,6 +4,9 @@ Prácticas de la asignatura de Estructuras de Datos y Programación, enfocadas e
 
 **Desarrollado en Java**
 
-## Colaboradores
+## Prácticas
 
-* [Juan Carlos Acosta Perabá](./JuanCarlosAcostaPeraba/)
+1. [Lista encadenada](./ListaEncadenada/)
+2. [Vector ordenado](./VectorOrdenado/)
+3. [Árbol binario de búsqueda](./ArbolBinarioDeBusqueda/)
+4. [Árbol B](./ArbolB/)
